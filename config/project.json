@@ -1,0 +1,55 @@
+{
+  "entry": "content/main.typ",
+  "output": "build/aizenberg-integrals.pdf",
+  "stage": "final",
+  "pdf_navigation": {
+    "outline_left": 0
+  },
+  "font_paths": [
+    "assets/fonts"
+  ],
+  "format_sources": [
+    "content"
+  ],
+  "tool_versions": {
+    "typst": "0.15.1",
+    "typstyle": "0.15.1",
+    "tinymist": "0.15.8"
+  },
+  "corrections_output": "build/aizenberg-integrals.corrections.pdf",
+  "corrections_entry": "content/corrections.typ",
+  "required_text": [
+    "Integral Representations",
+    "Preliminaries"
+  ],
+  "linux_tools": {
+    "typst": {
+      "url": "https://github.com/typst/typst/releases/download/v0.15.1/typst-x86_64-unknown-linux-musl.tar.xz",
+      "sha256": "a6d077d0a95eed5a2eba715b2dae06be954f624ccbf85758a03f389ded33118c",
+      "archive": true
+    },
+    "typstyle": {
+      "url": "https://github.com/typstyle-rs/typstyle/releases/download/v0.15.1/typstyle-x86_64-unknown-linux-gnu",
+      "sha256": "213c11bc2c64f7237c382b4bb1d06991530ed9d44d3a05204ca3c19615d55b99"
+    },
+    "tinymist": {
+      "url": "https://github.com/Myriad-Dreamin/tinymist/releases/download/v0.15.8/tinymist-x86_64-unknown-linux-gnu.tar.gz",
+      "sha256": "2428932e8d8b593ebc1ac4eed41fb9d3584166e1044bbcdef740b7296c348295",
+      "archive": true
+    }
+  },
+  "prose": {
+    "checker": "harper",
+    "header_band": 52.0
+  },
+  "bookmark_titles": {
+    "§4. The Cauchy formula. The logarithmic residue with respect to the skeletonEditor's note. \"Skeleton\" is a literal rendering of \"остов\", but \"distinguished boundary\" is common in the English literature.": "§4. The Cauchy formula. The logarithmic residue with respect to the skeleton",
+    "I Integral Representations and the Logarithmic Residue": "I. Integral Representations and the Logarithmic Residue",
+    "II Integral Representations of Special Form for Holomorphic Functions": "II. Integral Representations of Special Form for Holomorphic Functions",
+    "III The Theory of Residues": "III. The Theory of Residues",
+    "IV Applications to Implicit Functions, Systems of Nonlinear Equations, Computation of the Multiplicity of a Zero, and Combinatorics": "IV. Applications to Implicit Functions, Systems of Nonlinear Equations, Computation of the Multiplicity of a Zero, and Combinatorics",
+    "V Some Applications in Multidimensional Complex Analysis": "V. Some Applications in Multidimensional Complex Analysis",
+    "§19. Local residues of certain meromorphic and rational functions on Cn": "§19. Local residues of certain meromorphic and rational functions on 𝐂ⁿ",
+    "§25. The ∂-problem and Oka's theorems": "§25. The ∂̄-problem and Oka's theorems"
+  }
+}

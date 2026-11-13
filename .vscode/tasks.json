@@ -1,0 +1,126 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Aizenberg: PDF",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Aizenberg: prepare export",
+        "Aizenberg: export (Tinymist)",
+        "Aizenberg: validate PDF"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Aizenberg: prepare export",
+      "type": "process",
+      "command": "uv",
+      "args": [
+        "run",
+        "--locked",
+        "python",
+        "scripts/project.py",
+        "editor-prepare"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Aizenberg: export (Tinymist)",
+      "type": "typst",
+      "command": "export",
+      "export": {
+        "format": "pdf",
+        "inputPath": "${workspaceFolder}/content/main.typ",
+        "pdf.pdfTags": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Aizenberg: validate PDF",
+      "type": "process",
+      "command": "uv",
+      "args": [
+        "run",
+        "--locked",
+        "python",
+        "scripts/project.py",
+        "editor-finish"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Aizenberg: check",
+      "type": "process",
+      "command": "uv",
+      "args": [
+        "run",
+        "--locked",
+        "python",
+        "scripts/project.py",
+        "check"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Aizenberg: lint",
+      "type": "process",
+      "command": "uv",
+      "args": [
+        "run",
+        "--locked",
+        "python",
+        "scripts/project.py",
+        "lint"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Aizenberg: corrections",
+      "type": "process",
+      "command": "uv",
+      "args": [
+        "run",
+        "--locked",
+        "python",
+        "scripts/project.py",
+        "corrections"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Aizenberg: format",
+      "type": "process",
+      "command": "uv",
+      "args": [
+        "run",
+        "--locked",
+        "python",
+        "scripts/project.py",
+        "fmt"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

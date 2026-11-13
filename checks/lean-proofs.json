@@ -1,0 +1,122 @@
+[
+  {
+    "file": "checks/lean/AizenbergIntegrals/Ch1.lean",
+    "declarations": [
+      "AizenbergIntegrals.Ch1.shilov_unique_step",
+      "AizenbergIntegrals.Ch1.shilov_far_bound",
+      "AizenbergIntegrals.Ch1.shilov_lambda_exists",
+      "AizenbergIntegrals.Ch1.bergman_diagonal_bound",
+      "AizenbergIntegrals.Ch1.example3_bound",
+      "AizenbergIntegrals.Ch1.example3_attained",
+      "AizenbergIntegrals.Ch1.rouche_remark",
+      "AizenbergIntegrals.Ch1.rouche_remark_printed"
+    ],
+    "book": "Aizenberg and Yuzhakov (1983), Chapter I: the inequalities of the uniqueness proof of Theorem 6.1 (p. 43; with the corrected r <= |z_i^1 - z_i^0|), including the existence of lambda > 1 with m + ln(R + lambda B) < M + ln(lambda B); the bound (6.6) in the proof of Theorem 6.4 (p. 45); -m s - l s^2 <= m^2/(4l), attained at s = -m/(2l), behind Example 3 of §6 (p. 44); the corrected Remark after Theorem 2.5 (p. 20): |Re g_j| < |Re f_j| gives Re(f_j + t g_j) != 0 for 0 <= t <= 1, while the printed Re g_j < Re f_j does not.",
+    "limitations": "Real and complex inequalities for explicit numbers only: moduli, real parts and logarithms of the text are real variables with the stated hypotheses; no Shilov boundary, upper semicontinuity, orthonormal system, holomorphy, zero count or integral is formalised. The kernels, constants, signs and residues of the chapter are checked in checks/sage/ch1.py.",
+    "passages": [
+      "th:shilov-boundary-existence",
+      "pt:shilov-boundary",
+      "th:bergman-kernel-convergence",
+      "eq:kernel-diagonal-bound",
+      "th:rouche-principle",
+      "eq:rouche-condition"
+    ]
+  },
+  {
+    "file": "checks/lean/AizenbergIntegrals/Ch2.lean",
+    "declarations": [
+      "AizenbergIntegrals.Ch2.levi_expansion",
+      "AizenbergIntegrals.Ch2.bochner_ono_chain",
+      "AizenbergIntegrals.Ch2.bochner_ono_ne_zero",
+      "AizenbergIntegrals.Ch2.lemma_10_7_bound",
+      "AizenbergIntegrals.Ch2.lemma_10_7_quotient",
+      "AizenbergIntegrals.Ch2.lemma_10_7_printed_false"
+    ],
+    "book": "Chapter II: the expansion of the Levi determinant along its first column, L(rho) = sum_l (-1)^(l-1) rho'_(zetabar_l) delta_l with the delta_l of (8.5), behind the restored (8.6) (§8, 3°, pp. 61-62), for all n; the chain before the Bochner-Ono formula (8.9) (§8, 4°, p. 63): |<zetabar - vbar, zeta - z>| >= |zeta - v|(|zeta - v| - |z - v|) and the non-vanishing of the denominator for |z - v| < |zeta - v|; the step r^(2n-3)/(r^2 + eps^2)^(n-1) <= 2^(n-1)/(r + eps) of the proof of Lemma 10.7 (p. 72) and the failure of the printed bound without 2^(n-1) for n = 2.",
+    "limitations": "Algebraic identities and real inequalities only: the Levi determinant over any commutative ring with the values at a point as data (the relation of the forms on Gamma_m and the equality of the integrands of (8.5) and (8.6) are checked in checks/sage/ch2.py for n <= 4 only); the Bochner-Ono chain in an abstract complex inner product space (C^n with the standard product is an instance, not imported); of Lemma 10.7 only the pointwise bound, not the integrals, the spherical coordinates or (10.12).",
+    "passages": [
+      "eq:linearly-convex-formula",
+      "eq:linearly-convex-levi",
+      "pt:bochner-ono",
+      "eq:bochner-ono",
+      "lem:log-integral-estimate"
+    ]
+  },
+  {
+    "file": "checks/lean/AizenbergIntegrals/Ch3.lean",
+    "declarations": [
+      "AizenbergIntegrals.Ch3.dominant_sum_ne_zero_weighted",
+      "AizenbergIntegrals.Ch3.dominant_sum_ne_zero",
+      "AizenbergIntegrals.Ch3.ratio_condition_iff",
+      "AizenbergIntegrals.Ch3.printed_bound_admits_zero",
+      "AizenbergIntegrals.Ch3.discriminant_count",
+      "AizenbergIntegrals.Ch3.riemann_genus_count"
+    ],
+    "book": "Chapter III: the separation of the polar sets from the cycles gamma_alpha in the proof of Theorem 19.3 (p. 132, with the corrected bound delta/eps < (sum |c_k/c_n|)^(-1); the printed bound admits a zero) and before Theorem 19.8 (p. 136, weighted radii); the last step of the proof of Proposition 18.3 (p. 123: from the multiplicities over the roots of the discriminant to (18.7)); the genus count of Theorem 18.1 (Riemann, pp. 120-121) from the Euler-Poincare formula.",
+    "limitations": "Triangle inequality and integer bookkeeping only: the representation phi_j = sum c_k phi_(alpha_k), the topology of the cycles, the Euler-Poincare formula, the cell decomposition and the identification of branch points with roots of the discriminant are hypotheses taken from the book; the homology statements are checked only on examples in checks/sage/ch3.py.",
+    "passages": [
+      "th:local-dual-bases",
+      "th:linear-dual-bases",
+      "prop:complement-dimension-discriminant",
+      "eq:complement-dimension-discriminant",
+      "th:riemann-genus",
+      "eq:riemann-genus"
+    ]
+  },
+  {
+    "file": "checks/lean/AizenbergIntegrals/Ch4.lean",
+    "declarations": [
+      "AizenbergIntegrals.Ch4.remainder_tail",
+      "AizenbergIntegrals.Ch4.remainder_tail_field",
+      "AizenbergIntegrals.Ch4.example1_radius_le",
+      "AizenbergIntegrals.Ch4.example1_radius_attained",
+      "AizenbergIntegrals.Ch4.box_bound",
+      "AizenbergIntegrals.Ch4.box_closed_one",
+      "AizenbergIntegrals.Ch4.box_closed_two",
+      "AizenbergIntegrals.Ch4.weighted_mapping_degree",
+      "AizenbergIntegrals.Ch4.weighted_degree_after_substitution",
+      "AizenbergIntegrals.Ch4.weighted_quotient",
+      "AizenbergIntegrals.Ch4.weighted_quotient_printed_false"
+    ],
+    "book": "Chapter IV: the identity behind (20.48) in the proof of Theorem 20.19 (p. 153), sum_(q>k) C(q+n-1,q) a^q = a^(k+1) sum_(p=1)^n C(k+n-p,k)(1-a)^(-p), for all n, k (cleared of denominators in any commutative ring, and in the book form over a field); Example 1 of 7 (p. 154): min{r, R e^(-rR)} <= e^(-1/2), with equality at r = e^(-1/2), R = e^(1/2); the induction of the proof of Theorem 21.4 (pp. 165-166) from (21.22) and alpha_1 <= |m| to the bounds of the box M, for all n, with the printed bounds for alpha_2, alpha_3; the bookkeeping of the proof of Theorem 22.7 (p. 184): prod_j q prod_(k!=j) a_k = q^n (prod a)^(n-1), the degree q (prod a) d of a substituted monomial of weighted degree d, the corrected quotient = prod a_j d_j, and the printed denominator giving 36 instead of 6.",
+    "limitations": "Algebraic identities and real inequalities only: no contour integral, series or residue is formalised (the integrals of the proof of Theorem 20.19 are checked in checks/sage/ch4.py); rho = min{r, R e^(-rR)} (Proposition 20.18) is taken from the book; in Theorem 21.4 the degree count (21.20)-(21.21) giving (21.22) is a hypothesis (it has a gap for i >= 3, see checks/sage/ch4.py B4), indices 0-based integers; for Theorem 22.7 the multiplicities themselves (Theorem 22.6, Proposition 22.1) are not formalised.",
+    "passages": [
+      "th:remainder-estimate",
+      "eq:remainder-estimate",
+      "pt:implicit-examples",
+      "prop:convergence-special",
+      "th:aizenberg-tsikh",
+      "eq:alpha-bound",
+      "eq:alpha-induction",
+      "th:weighted-principal-part"
+    ]
+  },
+  {
+    "file": "checks/lean/AizenbergIntegrals/Ch5.lean",
+    "declarations": [
+      "AizenbergIntegrals.Ch5.support_second",
+      "AizenbergIntegrals.Ch5.support_dist_bound",
+      "AizenbergIntegrals.Ch5.support_phi_le",
+      "AizenbergIntegrals.Ch5.support_lower_bound",
+      "AizenbergIntegrals.Ch5.support_upper_bound",
+      "AizenbergIntegrals.Ch5.support_printed_domain_false",
+      "AizenbergIntegrals.Ch5.sphere_angle_bound",
+      "AizenbergIntegrals.Ch5.theta_mul_le",
+      "AizenbergIntegrals.Ch5.theta_le_ratio",
+      "AizenbergIntegrals.Ch5.rho_h_near",
+      "AizenbergIntegrals.Ch5.rho_h_far"
+    ],
+    "book": "Chapter V: the estimates (25.3)-(25.5) of §25, 2° (p. 206) from the first inequality (25.2) on Dbar x Dbar, with both directions of (25.5): the lower bound sigma/(5 sigma + 2) [...] <= |Phi~| used in the proofs of Theorem 25.9 and Lemma 26.6, and the printed upper bound from the Taylor upper bound; the failure of (25.3) on Omega prime (ball, zeta = (3/2, 0), z = (2/3, 0)); the inequality |s_1| + s_2 sqrt(1 - s_1^2) >= (|s_1| + s_2)/4 in the proof of Lemma 25.7 (p. 210); for moduli of continuity theta (concave, monotone, theta(0) = 0): theta(lambda t) <= lambda theta(t), theta(x) <= (x/y + 1) theta(y), and the two cases in the proof of Lemma 26.3 (pp. 222-223), also used in Lemma 26.6 (p. 227).",
+    "limitations": "Real and complex inequalities for numbers: Phi(zeta, z), rho(zeta), rho(z), |zeta - z|^2 and sigma are variables under the stated hypotheses. Not formalised: (25.2) itself (Taylor formula, strict convexity), the coordinates of Lemma 10.6, the integrals of Lemma 25.7, differential forms, the analytic arguments. Kernels, determinants, signs and series of the chapter are checked in checks/sage/ch5.py.",
+    "passages": [
+      "eq:support-function-estimates",
+      "eq:distance-estimate",
+      "eq:phi-tilde-bound",
+      "eq:phi-tilde-estimate",
+      "lem:model-integral",
+      "lem:rho-times-g",
+      "eq:rho-h-continuity",
+      "lem:h-integrals"
+    ]
+  }
+]
